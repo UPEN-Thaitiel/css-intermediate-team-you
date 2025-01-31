@@ -12,36 +12,43 @@
     }
 
     .container {
-      height: 100vh;
-      display: grid;
-      gap: 3rem;
-      grid-template-columns: 1fr 1fr 1.5fr;
-      grid-template-rows: 1fr 1fr;
-    }
+  height: 100vh;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "cowboy book"
+    "astronaut book";
+}
 
-    .item {
-      font-size: 5rem;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: blueviolet;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.item {
+  font-size: 5rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    }
+.cowboy {
+  background-color: #00B9FF;
+  grid-area: cowboy;
+}
 
-    .cowboy {
-      background-color: #00B9FF;
-      grid-column: span 2;
-    }
+.astronaut {
+  background-color: #03989E;
+  grid-area: astronaut;
+}
 
-    .astronaut {
-      background-color: #03989E;
-      order: 1;
+.book {
+  background-color: #D27D2C;
+  grid-area: book;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      /* TODO: Make the astronaut box look like the goal2 image. */
-
-    }
   </style>
 </head>
 
